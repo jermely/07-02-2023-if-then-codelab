@@ -9,8 +9,13 @@ const myAnsverInput = document.getElementById("answerOne");
 const myAnsverButton = document.getElementById("answerButton");
 const myAnsverFeedbackElement = document.getElementById("answerFeedback");
 
-myAnsverButton.addEventListener("click", () => {
-  /* din kode her.  husk at skrive view funktion der viser om svaret er korrekt i myAnsverFeedbackElement, brug evt. innerHTML*/
+myAnsverButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  //console.log(myAnsverInput[1]);
+  if (myAnsverInput[1].value === "nej") {
+    myAnsverButton.style.backgroundColor = "green";
+  } else {
+  }
 });
 
 /*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
